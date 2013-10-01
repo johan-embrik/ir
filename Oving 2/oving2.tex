@@ -11,13 +11,73 @@
 
 \pagebreak
 
-\section{Oppgave 1}
-\subsection{DERP}
+\section*{Oppgave 1}
+\subsection*{Deloppgave a}
 
+SKRIVER INN MASSE TULL HER I MORGEN
+
+\subsection*{Deloppgave b}
+
+For å lettere å forstå hvor de ulike termvektene i dokumentet kommer ifra, setter vi opp en språkmodell for hvert dokument:
+
+\vspace{2mm}
+
+q = \{NTNU, campus\}
+
+\vspace{2mm}
+
+M$_{1}$ = \{NTNU is a university in Trondheim\}
+
+\vspace{2mm}
+
+\hspace{3.2ex} = \{$\frac{1}{6}$, $\frac{1}{6}$, $\frac{1}{6}$, $\frac{1}{6}$, $\frac{1}{6}$, $\frac{1}{6}$\}
+
+\vspace{2mm}
+
+P(q \textbar M$_{1}$) = $\frac{1}{6}$
+
+\vspace{5mm}
+
+M$_{2}$ = \{Gløshaugen is a Campus at NTNU, Øya is another campus.\}\footnotemark[1]
+
+\vspace{2mm}
+
+\hspace{3.2ex} = \{$\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$, $\frac{1}{10}$\}
+
+\vspace{2mm}
+
+P(q \textbar M$_{2}$) = $\frac{1}{10}$
+)
+\vspace{5mm}
+
+\noindent Videre setter vi opp språkmodell for samlingen:\footnotemark[2]
+
+\vspace{2mm}
+
+$\lambda$ = 0.5
+
+\vspace{2mm}
+
+P(q, d$_{1}$) = ((1-0.5)$\frac{2}{16}$) + (0.5($\frac{1}{6}$))  x  ((1-0.5)$\frac{2}{16}$) + (0.5($\frac{0}{6}$))
+
+\hspace{8.4ex} = $\frac{7}{48}$  x  $\frac{1}{16}$   =   $\frac{7}{768}$  =  0.00911  
+
+\vspace{4mm}
+
+P(q, d$_{2}$) = ((1-0.5)$\frac{2}{16}$) + (0.5($\frac{1}{10}$))  x  ((1-0.5)$\frac{2}{16}$) + (0.5($\frac{2}{10}$))
+
+\hspace{8.4ex} = $\frac{9}{80}$  x  $\frac{13}{80}$   =   $\frac{117}{6400}$  =  0.01823  
+
+\vspace{2mm} 
+
+\noindent Som vi ser av dette er d$_{1}$ \textless d$_{2}$, som tilsier at d$_{2}$ vil rangeres som det beste dokumentet. 
+
+\footnotetext[1]{Vi forutsetter at språkmodellen ikke tar hensyn til store og små bokstaver.}
+\footnotetext[2]{Formelen vi benytter til å regne ut er gitt i oppgaveteksten til oppgave 1b.}
 \pagebreak
 
-\section{Oppgave 2}
-\subsection{DERP}
+\section*{Oppgave 2}
+\subsection*{DERP}
 
 \pagebreak
 
