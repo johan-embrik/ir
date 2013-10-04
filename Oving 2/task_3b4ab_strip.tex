@@ -1,20 +1,19 @@
-\usepackage{mathtools}
-
-
-\section*{Task 3b}
+\subsection*{Deloppgave b}
 
 \vspace{3 mm}
 
-\subsection*{Automatic Global Analysis vs. Automatic Local Analysis}
+\subsubsection*{Automatic Global Analysis vs. Automatic Local Analysis}
 Med Automatic Global Analysis bygger man tesaurus fra alle dokumentene som finnes, mens med Automatic Local Analysis bygger man tesaurus fra de dokumentene som den initielle spørringen returnerte som resultat. Tesaurus er synonymer/relasjonsord som brukt til å ekspandere spørringen.
 
 \vspace{6 mm}
 
-\section*{Task 4a}
+\section*{Oppgave 4 - Evaluation of IR-systems}
+
+\subsection*{Deloppgave a}
 
 \vspace{3 mm}
 
-\subsection*{Precision}
+\subsubsection*{Precision}
 Pricision eller på godt norsk Presisjon, er en beskrivelse av resultatet på en spørring. Det kan også omhandle IR systemet i sin helhet, hvor man finner den generelle presisjonen til systemet ved å ta snittet av presisjonene for en større samling spørringer. Pricision er prosentandelen av dokumentene som er relevante (for spørringen) fra en samling dokumenter, der samlingen med dokumenter er det IR systemet har returnert som svar på spørringen. Med denne målingen kan vi evalurere hvor godt systemet filtrer ut urelevante dokumenter, og sannsynligheten for at et gitt dokument er relevant.
 
 \vspace{3 mm}
@@ -29,7 +28,7 @@ Dersom et søk returnerer 1000 dokumenter, og 200 av dem er relevante, hjelper d
 
 \vspace{3 mm}
 
-\subsection*{Recall}
+\subsubsection*{Recall}
 Svaret på en spørring er en mengde dokumenter, denne mengden består som regel av relevante og urelevante dokumenter, avhengig av presisjon. Men denne mengden er bare et subset av en enda større mengde dokumenter, bedre kjent som alle dokumentene systemet er i stand til å finne. Blant alle disse dokumentene finnes de dokumentene vi fikk som svar, og dokumenter som vi ikke fikk som svar. Ofte er det slik at noen av de dokumentene som er relevante befinner seg i mengden vi ikke fikk som svar, og vi sitter derfor igjen med kun et subset av de relevante dokumentene. Recall beskriver denne oppførselen, og kan bli sett på som sannsynligheten for at et relevant dokument blir returnert for en gitt spørring.
 
 \vspace{3 mm}
@@ -48,15 +47,15 @@ Pricision og recall er inverst relatert, dersom recall øker, synker precision. 
 
 \vspace{6 mm}
 
-\section*{Task 4b}
+\subsection*{Deloppgave b}
 
 \vspace{3 mm}
 
-Jeg antar at man skal finne presicion for de 10 første dokumentene, hvor rekkefølgen er fra venstre til høyre i samlingen d.
+Vi antar at man skal finne presicion for de 10 første dokumentene, hvor rekkefølgen er fra venstre til høyre i samlingen d.
 
 \vspace{3 mm}
 
-$d = \{2,6,72,10,84,15,103,66,37,45,12,201,33,94,22\}$
+$d = \{2,6,72,10,84,15,13,66,37,45,12,201,33,94,22\}$
 
 \vspace{3 mm}
 
