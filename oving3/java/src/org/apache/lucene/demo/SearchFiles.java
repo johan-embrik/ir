@@ -23,16 +23,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
+import java.util.StringTokenizer;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.*;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
@@ -111,8 +110,14 @@ public class SearchFiles {
       if (line.length() == 0) {
         break;
       }
-      
-      Query query = parser.parse(line);
+      //HER ENDRE MAN LINJE FOR OPPGAVE 3
+      //Query query = parser.parse(line);
+	  BooleanQuery query = new BooleanQuery();
+	    StringTokenizer st = new StringTokenizer(line);
+		while (st.hasMoreTokens()) {
+			TermQuery tq =  new TermQuery(new Term("contents", st.nextToken()));
+			query.add(tq, BooleanClause.Occur.MUST);
+		}
       System.out.println("Searching for: " + query.toString(field));
             
       if (repeat > 0) {                           // repeat & time as benchmark
