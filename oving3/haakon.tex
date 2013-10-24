@@ -1,3 +1,9 @@
+\lstset{language=Java,
+numberstyle=\footnotesize,
+basicstyle=\ttfamily\footnotesize,
+frame=shadowbox,
+breaklines=true}
+
 \section*{Oppgave 3 - Lucene's Boolean Query Model}
 
 MÅ FORKLARE KODEN\\
@@ -8,30 +14,35 @@ MÅ FORKLARE KODEN\\
 \noindent \textbf{Resultater ved å kjøre med MUST-clause:}
 
 
-\begin{description}
-    \item[apple] \hfill \\
-    Searching for: +apple \hfill \\
-	7 total matching documents \hfill \\
-	1. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc7.txt \hfill \\
-	2. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc2.txt \hfill \\
-	3. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc4.txt \hfill \\
-	4. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc10.txt \hfill \\
-	5. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc1.txt \hfill \\
-	6. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc3.txt \hfill \\
-	7. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc5.txt \hfill \\
-    \item[apple grape] \hfill \\
-    Searching for: +apple +grape \hfill \\
-	4 total matching documents \hfill \\
-	1. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc2.txt \hfill \\
-	2. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc10.txt \hfill \\
-	3. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc3.txt \hfill \\
-	4. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc5.txt \hfill \\
-    \item[apple grape melon] \hfill \\
-    Searching for: +apple +grape +melon \hfill \\
-	3 total matching documents \hfill \\
-	1. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc10.txt \hfill \\ 
-	2. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc3.txt \hfill \\
-	3. /Users/hakloev/git/TDT4117/oving3/java/src/apple/doc5.txt \hfill \\
-\end{description}
+\begin{lstlisting}[frame=single]
+  Searching for: +apple 
+	7 total matching documents 
+	1. ~/git/TDT4117/oving3/java/src/apple/doc7.txt 
+	2. ~/git/TDT4117/oving3/java/src/apple/doc2.txt 
+	3. ~/git/TDT4117/oving3/java/src/apple/doc4.txt 
+	4. ~/git/TDT4117/oving3/java/src/apple/doc10.txt
+	5. ~/git/TDT4117/oving3/java/src/apple/doc1.txt 
+	6. ~/git/TDT4117/oving3/java/src/apple/doc3.txt 
+	7. ~/git/TDT4117/oving3/java/src/apple/doc5.txt 
+\end{lstlisting}
+
+
+\begin{lstlisting}[frame=single]
+  Searching for: +apple +grape
+	4 total matching documents
+	1. ~/git/TDT4117/oving3/java/src/apple/doc2.txt 
+	2. ~/git/TDT4117/oving3/java/src/apple/doc10.txt 
+	3. ~/git/TDT4117/oving3/java/src/apple/doc3.txt 
+	4. ~/git/TDT4117/oving3/java/src/apple/doc5.txt 
+\end{lstlisting}
+
+
+\begin{lstlisting}
+  Searching for: +apple +grape +melon 
+	3 total matching documents 
+	1. ~/git/TDT4117/oving3/java/src/apple/doc10.txt 
+	2. ~/git/TDT4117/oving3/java/src/apple/doc3.txt 
+	3. ~/git/TDT4117/oving3/java/src/apple/doc5.txt
+\end{lstlisting}
 
 \noindent   
