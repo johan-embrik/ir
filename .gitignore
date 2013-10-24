@@ -1,3 +1,7 @@
 *.aux
 *.out
 *.log
+
+oving3/java/.idea/
+oving3/java/lucene.iml
+oving3/java/bin/
