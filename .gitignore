@@ -1,3 +1,9 @@
 *.aux
 *.out
 *.log
+
+.DS_Store
+
+oving3/java/.idea/
+oving3/java/lucene.iml
+oving3/java/bin/
