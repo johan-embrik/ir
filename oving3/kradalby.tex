@@ -39,8 +39,6 @@ Til slutt i indekseringsprosessen vil filen bli åpnet i en leser for å indekse
 Til slutt vil den indekserte dokumentet bli skrevet til et nytt indeksert dokument. Det kan som vist også bli oppdatert om filen allerede finnes fra før.
 
 
-
-
 \begin{lstlisting}[frame=single]  % Start your code-block
 /home/kradalby/workspace/ir_assignment3/src/apple
 Indexing to directory 'index'...
@@ -56,6 +54,13 @@ adding /home/kradalby/workspace/ir_assignment3/src/apple/doc7.txt
 adding /home/kradalby/workspace/ir_assignment3/src/apple/doc3.txt
 378 total milliseconds
 \end{lstlisting}
-
+\pagebreak
 \subsection*{Søk med Apache Lucene}
-woop
+\noindent \textbf{Søkeord: \textit{apple}}
+\lstinputlisting{search/apple.txt}
+\noindent \textbf{Søkeord: \textit{apple grape}}
+\lstinputlisting{search/applegrape.txt}
+\noindent \textbf{Søkeord: \textit{apple grape melon}}
+\lstinputlisting{search/applegrapemelon.txt}
+
+I disse søkene blir det brukt , de returnerte dokumentene som ble returnert inneholdt et eller flere av termene i spørringen, altså OR.
