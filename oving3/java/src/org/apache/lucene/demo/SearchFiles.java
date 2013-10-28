@@ -116,7 +116,7 @@ public class SearchFiles {
 	    StringTokenizer st = new StringTokenizer(line);
 		while (st.hasMoreTokens()) {
 			TermQuery tq =  new TermQuery(new Term("contents", st.nextToken()));
-			query.add(tq, BooleanClause.Occur.MUST);
+			query.add(tq, BooleanClause.Occur.SHOULD);
 		}
       System.out.println("Searching for: " + query.toString(field));
             
