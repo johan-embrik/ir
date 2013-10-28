@@ -17,4 +17,14 @@ if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
            System.out.println("updating " + file);
            writer.updateDocument(new Term("path", file.getPath()), doc);
          }
-
+System.out.println("Indexing to directory '" + indexPath + "'...");
+Directory dir = FSDirectory.open(new File(indexPath));
+Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_31);
+IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_31, analyzer);
+if (create) {
+  iwc.setOpenMode(OpenMode.CREATE);
+} else {
+  iwc.setOpenMode(OpenMode.CREATE_OR_APPEND);
+}
+IndexWriter writer = new IndexWriter(dir, iwc);
+indexDocs(writer, docDir);
